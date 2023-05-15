@@ -1,27 +1,24 @@
-import PropTypes from 'prop-types';
-export default function Searchbar() {
- 
+import propTypes from 'prop-types';
 
-  return (
+export const Searchbar = ({ onSubmit }) => (
+  <header className="Searchbar">
+    <form className="SearchForm" onSubmit={onSubmit}>
+      <button type="submit" className="SearchForm-button">
+        <span className="SearchForm-button-label">Search</span>
+      </button>
 
-<header classNamesNames="searchbar">
-  <form classNames="form">
-    <button type="submit" classNames="button">
-      <span classNames="button-label">Search</span>
-    </button>
-
-    <input
-      classNames="input"
-      type="text"
-      autocomplete="off"
-      autofocus
-      placeholder="Search images and photos"
-    />
-  </form>
-</header>
+      <input
+        name="inputForSearch"
+        className="SearchForm-input"
+        type="text"
+        autoComplete="off"
+        autoFocus
+        placeholder="Search images and photos"
+      />
+    </form>
+  </header>
 );
-}
 
 Searchbar.propTypes = {
-  onSubmit: PropTypes.func.isRequired,
-};   
+  onSubmit: propTypes.func,
+};  
