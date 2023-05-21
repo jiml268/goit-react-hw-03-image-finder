@@ -1,11 +1,12 @@
 import { InfinitySpin } from 'react-loader-spinner';
 
+
 export const Loader = () => (
   <div className="Loader">
     <InfinitySpin
       visible={true}
-      height="80"
-      width="80"
+      height="200"
+      width="200"
       ariaLabel="blocks-loading"
       wrapperStyle={{}}
       wrapperClass="blocks-wrapper"

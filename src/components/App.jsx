@@ -81,7 +81,11 @@ export class App extends Component {
         }}
       >
         {this.state.isLoading ? (
-          <Loader />
+          <div>
+          <Searchbar onSubmit={this.handleSubmit} />
+
+            <Loader />
+            </div>
         ) : (
           <React.Fragment>
             <Searchbar onSubmit={this.handleSubmit} />
